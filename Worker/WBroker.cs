@@ -14,10 +14,6 @@ namespace Worker
 
         private readonly static Configuration conf = new Configuration();
         /// <summary>
-        ///Имя очереди для отправки
-        ///</summary>
-        private readonly static string nameCall = conf.QueueName("send");
-        /// <summary>
         /// Имя очереди для получения
         /// </summary>
         private readonly static string nameReceiv = conf.QueueName("receive");

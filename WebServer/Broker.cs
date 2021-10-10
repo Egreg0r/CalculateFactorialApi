@@ -9,6 +9,9 @@ using System.Collections.Concurrent;
 
 namespace WebServer
 {
+    /// <summary>
+    /// Класс обмена сообщениями с брокером
+    /// </summary>
     class Send
     {
         private readonly static Configuration conf = new Configuration();
@@ -16,10 +19,6 @@ namespace WebServer
         ///Имя очереди для отправки
         ///</summary>
         private readonly static string nameCall = conf.QueueName("send");
-        /// <summary>
-        /// Имя очереди для получения
-        /// </summary>
-        private readonly static string nameResev = conf.QueueName("receive");
         /// <summary>
         /// Соединение с брокером
         /// </summary>
@@ -34,24 +33,7 @@ namespace WebServer
         private readonly IBasicProperties props;
 
         /// <summary>
-        /// Отпарвление сообшения в брокер
-        /// </summary>
-        /// <param name="message">строка сообщения</param>
-        /// <returns></returns>
-        public string Call(string message)
-        {
-            var messageBytes = Encoding.UTF8.GetBytes(message);
-            channel.BasicPublish(
-                exchange: "",
-                routingKey: nameCall,
-                basicProperties: props,
-                body: messageBytes);
-
-            return respQueue.Take();
-        }
-
-        /// <summary>
-        /// 
+        /// Получение сообщения от брокера
         /// </summary>
         public Send()
         {
@@ -88,6 +70,25 @@ namespace WebServer
                 Console.WriteLine("Exeption", ex);
             }
         }
+
+
+        /// <summary>
+        /// Отпарвление сообшения в брокер
+        /// </summary>
+        /// <param name="message">строка сообщения</param>
+        /// <returns></returns>
+        public string Call(string message)
+        {
+            var messageBytes = Encoding.UTF8.GetBytes(message);
+            channel.BasicPublish(
+                exchange: "",
+                routingKey: nameCall,
+                basicProperties: props,
+                body: messageBytes);
+
+            return respQueue.Take();
+        }
+
 
         /// <summary>
         /// 

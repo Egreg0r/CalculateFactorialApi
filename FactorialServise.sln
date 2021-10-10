@@ -7,9 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Worker", "Worker\Worker.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerTest", "ServerTest\ServerTest.csproj", "{CA0D23BC-FF15-4B28-B674-1AA35368532F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServer", "WebServer\WebServer.csproj", "{BCE6202B-F998-468A-9658-8B36DE80A0CC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SreverWebApi", "SreverWebApi\SreverWebApi.csproj", "{897D80DB-E191-42E0-AB6D-0E9B9F9E2152}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebServer", "WebServer\WebServer.csproj", "{BCE6202B-F998-468A-9658-8B36DE80A0CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +27,6 @@ Global
 		{BCE6202B-F998-468A-9658-8B36DE80A0CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCE6202B-F998-468A-9658-8B36DE80A0CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCE6202B-F998-468A-9658-8B36DE80A0CC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{897D80DB-E191-42E0-AB6D-0E9B9F9E2152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{897D80DB-E191-42E0-AB6D-0E9B9F9E2152}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{897D80DB-E191-42E0-AB6D-0E9B9F9E2152}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{897D80DB-E191-42E0-AB6D-0E9B9F9E2152}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
